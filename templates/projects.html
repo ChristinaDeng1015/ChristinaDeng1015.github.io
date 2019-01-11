@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Projects</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../static/css/style.css" rel="stylesheet" />
+<link href="../static/css/animate.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<style>
+* {
+  	box-sizing: border-box;
+}
+body {
+	margin: 2rem;
+	height: 100%;
+	margin:0;
+	line-height: 180%;
+	text-align: center;
+	transition: all 1s ease-in;
+}
+#sidle.slide {
+  	position: relative;
+  	width: 45%;
+	
+}
+#sidle.slide img {
+  	position: absolute;
+  	width: 100%;
+}
+#sidle.slide img:hover {
+  cursor: pointer;
+}
+#sidle.slide .full:hover {
+  cursor: default ;
+}
+#sidle:not(.slide) {
+  width: 98%;
+  margin: 0 auto;
+}
+#sidle:not(.slide) img {
+  width: 48%;
+  display: inline-block;  
+}
+@media all and (max-width: 600px) {
+	#sidle.slide {
+	width: 100%;
+	}
+  #sidle.slide img {
+	position: static;
+    width: 100% !important;
+    display: inline-block; 
+		-webkit-clip-path: none !important;
+  } 
+}
+</style>
+	
+	
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top menu" role="navigation" id="navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+					<span class="sr-only">Toggle navigation </span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-main">
+				<ul class="nav navbar-nav">
+					<li><a class="active" href="main.html"> Home </a></li>
+					<li><a href="Education&Experience.html"> Experience </a></li>
+					<li><a href="projects.html"> Portfolio </a></li>
+					<li><a href="gallery.html"> Gallery </a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<h1> Projects</h1>
+	<h2>Computer Science</h2>
+	<embed src="../static/project/automated puzzle solving.pdf" width="40%" height="80%" 
+ 	type="application/pdf">
+	<embed src="../static/project/ride-sharing simulation.pdf" width="40%" height="80%" 
+ 	type="application/pdf">
+	<h2>Data Science</h2>
+	<embed src="../static/project/Linear Regression.pdf" width="40%" height="80%" 
+ 	type="application/pdf">
+	<embed src="../static/project/Time Series .pdf" width="40%" height="80%" 
+ 	type="application/pdf">
+	<h2>Digital Media</h2>
+	<embed src="../static/project/EV 20XX.pdf" width="40%" height="80%" 
+ 	type="application/pdf">
+	<embed src="../static/project/Space Claw presentation.pdf" width="40%" height="80%" 
+ 	type="application/pdf">
+	
+	<h1> Certification </h1>
+	<div id="sidle" style="text-align: left; padding-left: 5%">
+		<img src="../static/Certification/A Better CSS- LESS and SASS.jpeg" alt>
+		<img src="../static/Certification/CSS Positioning.jpeg" alt>
+		<img src="../static/Certification/HTML Fundamentals.jpeg" alt>
+		<img src="../static/Certification/HTML5 Fundamentals.jpeg" alt>
+		<img src="../static/Certification/HTML5 Web Component Fundamentals.jpeg" alt>
+		<img src="../static/Certification/Introduction to CSS.jpeg" alt>
+		<img src="../static/Certification/Meeting Web Accessibility Guidelines.jpeg" alt>
+		<img src="../static/Certification/Practical HTML5.jpeg" alt>
+		<img src="../static/Certification/Responsive Typography.jpeg" alt>
+		<img src="../static/Certification/Responsive Websites With Bootstrap 3.jpeg" alt>
+		<img src="../static/Certification/Semantic HTML.jpeg" alt>
+		<img src="../static/Certification/The Big Picture.jpeg" alt>
+		<img src="../static/Certification/WebRTC Fundamentals.jpeg" alt>
+	</div>
+	
+	
+	
+	
+<script>
+const imageArea = document.getElementById("sidle"),
+images = imageArea.getElementsByTagName("img");
+
+if (images.length > 1) {
+	for (var i = 0; i < images.length; i++) {
+		let topEdge = ((100 / images.length) * i) + 1,
+		bottomEdge = (topEdge + (100 / images.length)) - 1;
+		images[i].style.clipPath = `polygon(0% ${topEdge}%, 100% ${topEdge}%, 100% ${bottomEdge}%, 0% ${bottomEdge}%)`;
+	}
+	imageArea.classList.add("slide");
+
+	function slide(imgTarget, direction) {
+					 let slidy = imgTarget.animate([
+							{ transform: 'translateX(0%)', clipPath: imgTarget.style.clipPath },
+							{ transform: 'translateX(101%)', clipPath: imgTarget.style.clipPath },
+							{ transform: 'translateX(101%)', clipPath: imgTarget.style.clipPath },
+							{ transform: 'translateX(101%)', clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' }
+						], {
+						duration: 666,
+						easing: 'linear',
+						fill: 'forwards',
+						direction: direction
+				 });
+				 imgTarget.classList.toggle("full");
+	}
+	imageArea.addEventListener("click", function(e) {
+		let fullImage = document.querySelector(".full");
+		if (fullImage == null) {
+				slide(e.target, "normal");
+			 } else {
+				 slide(fullImage, "reverse");
+				 if (e.target !== fullImage) {
+					 setTimeout(function(){ slide(e.target, "normal"); }, 200);
+				 }
+			 }
+	})
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
