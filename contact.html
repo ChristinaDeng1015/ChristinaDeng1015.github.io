@@ -9,6 +9,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 <link href="../static/css/style.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+      #map {
+        height: 300px;
+        width: 100%;
+       }
+	
+    </style>
 </head>
 
 <body>
@@ -33,5 +41,61 @@
 			</div>
 		</div>
 	</nav>
+	
+	<div class="container form-top" style="padding-top: 8%">
+		<h1 style="font-family: 'VT323', monospace; font-size: 30px">Contact</h1>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+				<div class="panel panel-danger">
+					<div class="panel-body">
+						<form id="reused_form">
+						 	<div class="form-group">
+						 		<label >Name</label>
+						 		<input type="text" name="name" required class="form-control" placeholder="Enter Name">
+						 	</div>
+						 	<div class="form-group">
+						 		<label >Email</label>
+						 		<input type="email" name="email" required  class="form-control" placeholder="Enter Email">
+						 	</div>
+						 	<div class="form-group">
+						 		<label >Message</label>
+						 		<textarea rows="3" name="message" class="form-control" placeholder="Type Your Message"></textarea>
+						 	</div>
+						 	<div class="form-group">
+						 		<button class="btn btn-raised btn-lg btn-warning"
+						 		type="submit">Send</button>
+						 	</div>
+						</form>
+
+						<div id="error_message" style="width:100%; height:100%; display:none; ">
+						<h4>Error</h4>
+						Sorry there was an error sending your form.
+						</div>
+						<div id="success_message" style="width:100%; height:100%; display:none; ">
+						<h2>Success! Your Message was Sent Successfully.</h2>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><hr>
+	<p>Phone: 604-729-2762 | Email: christinadeng1015@gmail.com | Location: Toronto, ON</p>
+	<div id="map"></div>
+    <script>
+	function initMap() {
+	  var uluru = {lat: 43.6529, lng: -79.3849};
+	  var map = new google.maps.Map(
+		  document.getElementById('map'), {zoom: 14, center: uluru});
+	  var marker = new google.maps.Marker({position: uluru, map: map});
+	}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuUUIGYSvx8yTF7TEIjOY-y9mloNEYOvM&callback=initMap">
+    </script>
+	
+	
+
 </body>
 </html>
