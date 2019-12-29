@@ -1,0 +1,561 @@
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christina's Website</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link href="../static/css/style.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+<style>
+
+    #mainContent2 #firstBox {
+      font-weight: bold;
+      transform: translate3d(-30px, 0, 0);
+      transition: all .5s ease-out;
+      opacity: 0;
+    }
+ 
+    #mainContent2 #firstBox.active {
+
+      background-color:lightcoral;
+      color: #FFF;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+ 
+    #mainContent2 #secondBox {
+      transition: all .2s ease-in-out;
+      transform: translate3d(0, 30px, 0);
+      opacity: 0;
+    }
+ 
+    #mainContent2 #secondBox.active {
+      background-color:cadetblue;
+      color: #FFF;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+ 
+    #mainContent ol li {
+      transition: all .4s ease-in-out;
+      transform: translate3d(60px, 0, 0);
+      opacity: 0;
+    }
+ 
+    #mainContent ol li.active {
+      transform: translate3d(0px, 0, 0);
+      opacity: 1;
+    }
+	
+	#mainContent ul li {
+      transition: all .7s ease-in-out;
+      opacity: 0;
+    }
+	
+	#mainContent ul li.active {
+      opacity: 1;
+    }
+	
+</style>
+<style>
+
+.container {
+  	max-width: 100%;
+	min-width: 100%;
+}
+
+header {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+}
+
+</style>
+</head>
+
+<body>	
+	<nav class="navbar navbar-default navbar-fixed-top menu" role="navigation" id="navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+					<span class="sr-only">Toggle navigation </span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-main">
+				<ul class="nav navbar-nav">
+					<li><a class="active" href="index.html"> Home </a></li>
+					<li><a href="Education&Experience.html"> Experience </a></li>
+					<li><a href="projects.html"> Portfolio </a></li>
+					<li><a href="gallery.html"> Gallery </a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header>
+		<div class="parallax1 container">
+			<h1 class="text-shadow-pop-right">Hello World</h1>
+			<p class="line typer">Welcome to Christina's Website</p>
+			<a data-scroll href="#mainContent">
+				<img class="arrow animated bounce" alt="arrow" src="../static/img/arrow.png">
+			</a>
+		</div>
+	</header>
+	<br><br><br>
+	<section>
+		<div class="container" id="mainContent">
+			<h2 style="color: black"><span class="underline--magical">ABOUT&nbsp</span>CHRISTINA</h2>
+			<div class="row">
+				<p><i style="color: black">She is a data analyst, developer, digital marketer, and financial advisor. <br>
+				She graduated from University of Toronto in 2018.</i></p>
+
+				<div class="col-sm-6 col-xs-12">
+					<h3> Data Analyst </h3>
+					<ol style="list-style-type:square; text-align: left; padding-left:13%" >
+						<li>Interned at <i>China Mobile</i></li>
+						<li>Experienced in R Studio, Python, and SQL</li>
+						<li>Specialized in Mathematical Application in Economics and Finance</li>
+						<li>Majored in Statistics</li>
+						<li>Minored in Economics</li>
+						<li>Got accepted into Master's of Big Data at SFU</li>
+						<li>Strong interest towards Artificial Intelligence</li>
+					</ol>
+				</div>
+				
+				<div class="col-sm-6 col-xs-12" data-aos="fade-left">
+					<h3> Skill Set </h3>
+					<div class="main">
+						<div class="progressBar">
+							<div class="title HighestColor">R Studio</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighestColor">Python </div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighColor">Excel </div>
+							<div class="progress High"></div>
+							<div class="progress_value">85%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title MedianColor">SQL </div>
+							<div class="progress Median"></div>
+							<div class="progress_value">80%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowColor">Presentation</div>
+							<div class="progress Low"></div>
+							<div class="progress_value">75%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowColor">Visualization</div>
+							<div class="progress Low"></div>
+							<div class="progress_value">75%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowestColor">Datamining </div>
+							<div class="progress Lowest"></div>
+							<div class="progress_value">70%</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6 col-xs-12">
+					<h3> Front-End Developer </h3>
+					<ol style="list-style-type:square; text-align: left; padding-left:13%">
+						<li>Graphics and Website Designer at <i>SFU CAC</i></li>
+						<li>Proficient in HTML5, CSS3 and JavaScript</li>
+						<li>Meet Web Accessibility Guidelines</li>
+						<li>Familiar with Responsive Web Design</li>
+						<li>Knowledgeable in LESS & SASS </li>
+						<li>Competent in Bootstrap& jQuery</li>
+					</ol>
+				</div>
+				
+				<div class="col-sm-6 col-xs-12" data-aos="fade-left">
+					<h3> Skill Set </h3>
+					<div class="main">
+						<div class="progressBar">
+							<div class="title HighestColor">HTML(5)</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighestColor">CSS(3)</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighColor">JavaScript</div>
+							<div class="progress High"></div>
+							<div class="progress_value">85%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title MedianColor">Bootstrap</div>
+							<div class="progress Median"></div>
+							<div class="progress_value">80%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowColor">jQuery</div>
+							<div class="progress Low"></div>
+							<div class="progress_value">75%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowestColor">RWD </div>
+							<div class="progress Lowest"></div>
+							<div class="progress_value">70%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowestColor">UX & UI</div>
+							<div class="progress Lowest"></div>
+							<div class="progress_value">70%</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-xs-12" >
+					<h3> Digital Marketer </h3>
+					<ol style="list-style-type:square; text-align: left; padding-left:13%">
+						<li>Worked at <i>Bluekey Education</i> and <i>Simmer Huang</i></li>
+						<li>Adept in Adobe Tools</li>
+						<li>Studied Master's of Digital Media </li>
+						<li>Completed four group projects related to digital media</li>
+						<li>Profound understanding of current market related to technology field</li>
+						<li>Familiar with Prototyping, Product Sprints, User Testing, and KFC (Keep, Fixed and Change) processes.</li>
+					</ol>
+				</div>
+				
+				<div class="col-sm-6 col-xs-12" data-aos="fade-left">
+					<h3> Skill Set </h3>
+					<div class="main">
+						<div class="progressBar">
+							<div class="title HighestColor">Photoshop</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighestColor">Illustrator</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighColor">Storytelling</div>
+							<div class="progress High"></div>
+							<div class="progress_value">85%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title MedianColor">Teamwork</div>
+							<div class="progress Median"></div>
+							<div class="progress_value">80%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowColor">Video Editing</div>
+							<div class="progress Low"></div>
+							<div class="progress_value">75%</div>
+						</div>
+						
+						<div class="progressBar">
+							<div class="title LowestColor">Adobe XD</div>
+							<div class="progress Lowest"></div>
+							<div class="progress_value">70%</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6 col-xs-12">
+					<h3> Sales Associate & Server </h3>
+					<ol style="list-style-type:square; text-align: left; padding-left:13%">
+						<li>Worked at <i>Guess</i> as Sales Associate</li>
+						<li>Worked at <i>Frank + Oak</i> as Style Advisor</li>
+						<li>Worked at <i>Simmer Huang </i> as Server</li>
+						<li>Maintained excellent relationship with customers</li>
+						<li>Patient with customers and provided outstanding customer services</li>
+						<li>Familiar with cash handling</li>
+						<li>Fitted into corporate company culture</li>
+						<li>Friended many co-workers and managers</li>
+					</ol>
+				</div>
+				
+				<div class="col-sm-6 col-xs-12" data-aos="fade-left">
+					<h3> Skill Set </h3>
+					<div class="main">
+						<div class="progressBar">
+							<div class="title HighestColor">CustomerService</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighestColor">ActiveListening</div>
+							<div class="progress Highest"></div>
+							<div class="progress_value">90%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title HighColor">Communication</div>
+							<div class="progress High"></div>
+							<div class="progress_value">85%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title MedianColor">Leadership</div>
+							<div class="progress Median"></div>
+							<div class="progress_value">80%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowColor">TimeManagement</div>
+							<div class="progress Low"></div>
+							<div class="progress_value">75%</div>
+						</div>
+						<div class="progressBar">
+							<div class="title LowColor">Teamwork</div>
+							<div class="progress Low"></div>
+							<div class="progress_value">75%</div>
+						</div>
+						
+					
+					</div>
+				</div>
+			
+			</div>
+		</div>	
+	</section>
+	<br><br><br>
+	<div class="parallax2">
+		<blockquote id="header1" style="font-family: 'VT323', monospace;font-size: 35px" data-aos="zoom-in"><q>Think of how you want to live instead of what you want to do...</q>
+		</blockquote>
+	</div>
+	<br><br>
+	<section>
+		<div class="container">
+			<h2 style="color: black"><span class="underline--magical">STORY&nbsp</span>OF CHRISTINA</h2>
+			<div class="col-sm-3 col-xs-12">
+				<img class="img-responsive" src="../static/img/12.jpg" alt="gradphoto" style="border-radius: 50%; padding-top: 10%; padding-bottom: 10%" data-aos="fade-up-right">
+			</div>
+			<div class="col-sm-9 col-xs-12">
+				<p style="text-align: left;margin-right: 8%; margin-top: 5%; margin-bottom: 10%" data-aos="fade-up-left">
+					This October 2018, She turned 23 with a sudden sense of loss and anxiousness, unsure with her directions of life. Like other new grads, she was vigorously seeking for opportunities, in either education or occupations. She received invitation into Master’s of Big Data, but a UX designer friend recommended Digital Media for her Master. It was something different; a big change that will be out of her comfort zone. She accepted her master’s offer and declined the final round of interview with the HSBC manager. <br>
+		
+					First semester of the Master program taught her a lot of things that she had never experienced before. She improved her presentation skills and been able to work with groups. She understood how companies actually ran and gained a lot more practical experience. Gradually, She found her passion and things she wanted to do. <br>
+			
+					She was working during winter break as sales associate and style advisor and she realized life could be so simple. And jobs and degrees were not the things that defined success. Keeping learning and finding the passion were more important than anything else. Therefore, she decided to drop out from school and experienced the best years of her life. 
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<div class="parallax3">
+		<blockquote id="header2" style="font-family: 'VT323', monospace;font-size: 35px" data-aos="fade-up"
+     data-aos-anchor-placement="top-center"><q>Her Motivation and Passion... </q>
+		</blockquote>
+
+	</div>
+	
+	<div id="mainContent2">
+		<p id="firstBox">Find out more about her skills, experiences and projects.</p>
+		<p id="secondBox">She is currently looking for job opportunities, contact her if interested.</p>
+  	</div>
+	
+	<footer class="page-footer font-small cyan darken-3" style="clear: both">
+		<a href="https://www.facebook.com/christina.deng.1" class="c-link c-link--facebook c-tooltip" aria-label="Facebook">
+			<svg class="c-icon"><use xlink:href="#icon--facebook"></use></svg>
+		</a>
+		<a href="https://www.instagram.com/christinadeng1015/" class="c-link c-link--instagram c-tooltip" aria-label="Instagram">
+			<svg class="c-icon"><use xlink:href="#icon--instagram"></use></svg>
+		</a>
+		<a href="mailto:christinadeng1015@gmail.com" class="c-link c-link--google c-tooltip" aria-label="Gmail">
+			<svg class="c-icon"><use xlink:href="#icon--google"></use></svg>
+		</a>
+		<svg style="display: none">
+			<symbol id="icon--facebook" viewBox="0 0 24 24">
+				<path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+			</symbol>
+			<symbol id="icon--twitter" viewBox="0 0 24 24">
+				<path d="M17.71,9.33C17.64,13.95 14.69,17.11 10.28,17.31C8.46,17.39 7.15,16.81 6,16.08C7.34,16.29 9,15.76 9.9,15C8.58,14.86 7.81,14.19 7.44,13.12C7.82,13.18 8.22,13.16 8.58,13.09C7.39,12.69 6.54,11.95 6.5,10.41C6.83,10.57 7.18,10.71 7.64,10.74C6.75,10.23 6.1,8.38 6.85,7.16C8.17,8.61 9.76,9.79 12.37,9.95C11.71,7.15 15.42,5.63 16.97,7.5C17.63,7.38 18.16,7.14 18.68,6.86C18.47,7.5 18.06,7.97 17.56,8.33C18.1,8.26 18.59,8.13 19,7.92C18.75,8.45 18.19,8.93 17.71,9.33M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+			</symbol>
+			<symbol id="icon--google" viewBox="0 0 24 24">
+				<path d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
+			</symbol>
+			<symbol id="icon--pinterest" viewBox="0 0 24 24">
+				<path d="M13,16.2C12.2,16.2 11.43,15.86 10.88,15.28L9.93,18.5L9.86,18.69L9.83,18.67C9.64,19 9.29,19.2 8.9,19.2C8.29,19.2 7.8,18.71 7.8,18.1C7.8,18.05 7.81,18 7.81,17.95H7.8L7.85,17.77L9.7,12.21C9.7,12.21 9.5,11.59 9.5,10.73C9.5,9 10.42,8.5 11.16,8.5C11.91,8.5 12.58,8.76 12.58,9.81C12.58,11.15 11.69,11.84 11.69,12.81C11.69,13.55 12.29,14.16 13.03,14.16C15.37,14.16 16.2,12.4 16.2,10.75C16.2,8.57 14.32,6.8 12,6.8C9.68,6.8 7.8,8.57 7.8,10.75C7.8,11.42 8,12.09 8.34,12.68C8.43,12.84 8.5,13 8.5,13.2A1,1 0 0,1 7.5,14.2C7.13,14.2 6.79,14 6.62,13.7C6.08,12.81 5.8,11.79 5.8,10.75C5.8,7.47 8.58,4.8 12,4.8C15.42,4.8 18.2,7.47 18.2,10.75C18.2,13.37 16.57,16.2 13,16.2M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+			</symbol>
+			<symbol id="icon--instagram" viewBox="0 0 24 24">
+				<path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+			</symbol>
+			<symbol id="icon--snapchat" viewBox="0 0 24 24">
+				<path d="M12,20.45C10.81,20.45 10.1,19.94 9.47,19.5C9,19.18 8.58,18.87 8.08,18.79C6.93,18.73 6.59,18.79 5.97,18.9C5.86,18.9 5.73,18.87 5.68,18.69C5.5,17.94 5.45,17.73 5.32,17.71C4,17.5 3.19,17.2 3.03,16.83C3,16.6 3.07,16.5 3.18,16.5C4.25,16.31 5.2,15.75 6,14.81C6.63,14.09 6.93,13.39 6.96,13.32C7.12,13 7.15,12.72 7.06,12.5C6.89,12.09 6.31,11.91 5.68,11.7C5.34,11.57 4.79,11.29 4.86,10.9C4.92,10.62 5.29,10.42 5.81,10.46C6.16,10.62 6.46,10.7 6.73,10.7C7.06,10.7 7.21,10.58 7.25,10.54C7.14,8.78 7.05,7.25 7.44,6.38C8.61,3.76 11.08,3.55 12,3.55C12.92,3.55 15.39,3.76 16.56,6.38C16.95,7.25 16.86,8.78 16.75,10.54C16.79,10.58 16.94,10.7 17.27,10.7C17.54,10.7 17.84,10.62 18.19,10.46C18.71,10.42 19.08,10.62 19.14,10.9C19.21,11.29 18.66,11.57 18.32,11.7C17.69,11.91 17.11,12.09 16.94,12.5C16.85,12.72 16.88,13 17.04,13.32C17.07,13.39 17.37,14.09 18,14.81C18.8,15.75 19.75,16.31 20.82,16.5C20.93,16.5 21,16.6 20.97,16.83C20.81,17.2 20,17.5 18.68,17.71C18.55,17.73 18.5,17.94 18.32,18.69C18.27,18.87 18.14,18.9 18.03,18.9C17.41,18.79 17.07,18.73 15.92,18.79C15.42,18.87 15,19.18 14.53,19.5C13.9,19.94 13.19,20.45 12,20.45Z" />
+			</symbol>
+		</svg>
+		<div class="footer-copyright text-center py-3">© 2018 Copyright: Christina Deng
+		</div>
+  	</footer>
+	
+	
+	
+	
+<script>
+    var isScrolling = false;
+
+    window.addEventListener("scroll", throttleScroll, false);
+ 
+    function throttleScroll(e) {
+      if (isScrolling == false) {
+        window.requestAnimationFrame(function() {
+          scrolling(e);
+          isScrolling = false;
+        });
+      }
+      isScrolling = true;
+    }
+ 
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+ 
+    var listItems = document.querySelectorAll("#mainContent ol li");
+	var OllistItems = document.querySelectorAll("#mainContent ul li");
+    var firstBox = document.querySelector("#firstBox");
+    var secondBox = document.querySelector("#secondBox");
+	var thirdBox = document.querySelector("#thirdBox");
+	
+    function scrolling(e) {
+ 
+      if (isPartiallyVisible(firstBox)) {
+        firstBox.classList.add("active");
+ 
+        document.body.classList.add("colorOne");
+        document.body.classList.remove("colorTwo");
+      } else {
+        document.body.classList.remove("colorOne");
+        document.body.classList.remove("colorTwo");
+      }
+ 
+      if (isFullyVisible(secondBox)) {
+        secondBox.classList.add("active");
+ 
+        document.body.classList.add("colorTwo");
+        document.body.classList.remove("colorOne");
+      }
+	  
+ 
+      for (var i = 0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+ 
+        if (isPartiallyVisible(listItem)) {
+          listItem.classList.add("active");
+        } else {
+          listItem.classList.remove("active");
+        }
+      }
+	  
+	  for (var i = 0; i < OllistItems.length; i++) {
+        var OllistItem = OllistItems[i];
+ 
+        if (isPartiallyVisible(OllistItem)) {
+          OllistItem.classList.add("active");
+        } else {
+          OllistItem.classList.remove("active");
+        }
+      }
+    }
+ 
+    function isPartiallyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+      var height = elementBoundary.height;
+ 
+      return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
+ 
+    function isFullyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+ 
+      return ((top >= 0) && (bottom <= window.innerHeight));
+    }
+	
+	smoothScroll.init();
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+var header = $("header");
+var range = 200;
+
+$(window).on("scroll", function() {
+  var scrollTop = $(this).scrollTop(),
+    height = header.outerHeight(),
+    offset = height / 2,
+    calc = 1 - (scrollTop - offset + range) / range;
+
+  header.css({ opacity: calc });
+
+  if (calc > "1") {
+    header.css({ opacity: 1 });
+  } else if (calc < "0") {
+    header.css({ opacity: 0 });
+  }
+});
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1200,
+})
+</script>
+<script>
+function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};} // VARIABLES
+var magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
+
+var gradientAPI = 'https://gist.githubusercontent.com/wking-io/3e116c0e5675c8bcad8b5a6dc6ca5344/raw/4e783ce3ad0bcd98811c6531e40256b8feeb8fc8/gradient.json';
+
+var randNumInRange = function randNumInRange(max) {return Math.floor(Math.random() * (max - 1));};
+
+var mergeArrays = function mergeArrays(arrOne, arrTwo) {return arrOne.
+  map(function (item, i) {return item + ' ' + arrTwo[i];}).
+  join(', ');};
+
+var addBackground = function addBackground(elms) {return function (color) {
+    elms.forEach(function (el) {
+      el.style.backgroundImage = color;
+    });
+  };};
+
+var getData = function () {var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {var response, data;return regeneratorRuntime.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+              fetch(url));case 2:response = _context.sent;_context.next = 5;return (
+              response.json());case 5:data = _context.sent;return _context.abrupt('return',
+            data.data);case 7:case 'end':return _context.stop();}}}, _callee, undefined);}));return function getData(_x) {return _ref.apply(this, arguments);};}();
+
+var addBackgroundToUnderlines = addBackground(magicalUnderlines);
+
+var buildGradient = function buildGradient(obj) {return 'linear-gradient(' + obj.direction + ', ' + mergeArrays(obj.colors, obj.positions) + ')';};
+
+var applyGradient = function () {var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, callback) {var data, gradient;return regeneratorRuntime.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+              getData(url));case 2:data = _context2.sent;
+            gradient = buildGradient(data[randNumInRange(data.length)]);
+            callback(gradient);case 5:case 'end':return _context2.stop();}}}, _callee2, undefined);}));return function applyGradient(_x2, _x3) {return _ref2.apply(this, arguments);};}();
+
+applyGradient(gradientAPI, addBackgroundToUnderlines);</script>
+<script>
+$(document).ready(function(){
+        		$('.Highest').animate({width:'90%'},4000);
+        		$('.High').animate({width:'85%'},4000);
+        		$('.Median').animate({width:'80%'}, 4000);
+        		$('.Low').animate({width:'75%'},4000);
+        		$('.Lowest').animate({width:'70%'},4000);
+        	});
+</script>
+</body>
+	
+</html>

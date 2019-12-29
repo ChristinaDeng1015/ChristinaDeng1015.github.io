@@ -1,0 +1,825 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education & Experience</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../static/css/style.css" rel="stylesheet" />
+<link href="../static/css/animate.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+<style>
+html,
+body {
+  height: 100%;
+}
+body {
+  background: white;
+  margin: 0px;
+  padding: 0px;
+  line-height: 26px;
+  color:black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+h1{
+	font-family: 'Limelight', cursive;
+
+}
+h2,h3,h4,h5,h6{
+	font-family: 'Lato', sans-serif;
+	color: #59575a
+}	
+h3{
+	font-style: italic;
+	font-size: 20px;
+}
+h4{
+	text-decoration: underline
+}
+p{
+	font-style: italic
+}
+.header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(to bottom, #6fc7d4 0%, #39ACBD 100%);
+}
+.header .master-head {
+  padding: 7% 30px;
+}
+.header .page-title {
+  padding: 0 50px 0 50px;
+  font-size: 60px;
+  line-height: 1em;
+  letter-spacing: 10px;
+  color: #FFF;
+}
+.header .page-description {
+  margin: 30px auto;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 2em;
+  color: #FFF;
+}
+.header .scroll-button {
+  color: #FFF;
+  font-size: 20px;
+  padding: 15px 20px 15px 20px;
+  display: inline-block;
+  background: #3093A2;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header .scroll-button:hover {
+  background: #246f7b;
+}
+.header .scroll-button:active {
+  background: #194c53;
+}
+.main-content {
+  margin: 0px auto;
+  position: relative;
+}
+.main-content .section-inner,
+.main-content .post-wrapper {
+  *zoom: 1;
+}
+.main-content .section-inner:before,
+.main-content .post-wrapper:before,
+.main-content .section-inner:after,
+.main-content .post-wrapper:after {
+  content: "";
+  display: table;
+}
+.main-content .section-inner:after,
+.main-content .post-wrapper:after {
+  clear: both;
+}
+.footer {
+  background-image: white;
+  padding: 160px 0px 160px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.section .section-inner {
+  margin: 0px auto;
+  width: 1024px;
+}
+@media only screen {
+  .section .section-inner {
+    width: auto;
+    max-width: 1024px;
+  }
+}
+/*==========  Stem  ==========*/
+.stem-wrapper {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 50%;
+}
+.stem-wrapper.color-yellow .stem-background {
+  background:#F3F4BF;
+}
+.stem-wrapper.color-green .stem-background {
+  background:#307A7C;
+}
+.stem-wrapper.color-white .stem-background {
+  background:linear-gradient(to bottom, #6fc7d4 0%, #39ACBD 100%);
+}
+.stem-wrapper .stem,
+.stem-wrapper .stem-background {
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  width: 60px;
+}
+.stem-wrapper .stem {
+  background:white;
+  height: 100%;
+}
+.stem-wrapper .stem-background {
+  background: #39ACBD;
+  height: 50%;
+  transition-duration: 0.5s;
+}
+.stem-padding,
+.single-stem-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0px auto;
+  background: transparent  url("../static/img/stem-mask.png") repeat-y top center;
+}
+.single-stem-icon.scroll-to-top {
+  cursor: pointer;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/22043/scroll-to-top-icon.png);
+}
+.post-wrapper {
+  *zoom: 1;
+}
+.post-wrapper:before,
+.post-wrapper:after {
+  content: "";
+  display: table;
+}
+.post-wrapper:after {
+  clear: both;
+}
+.post-wrapper .post {
+  position: relative;
+  width: 432px;
+  padding: 0px 0px 60px 0px;
+  clear: both;
+  opacity: 1;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+.post-wrapper .post.hidden .post-content {
+  -webkit-transform: translateY(100px) rotateX(30deg);
+  transform: translateY(100px) rotateX(30deg);
+  opacity: 0;
+}
+.post-wrapper .post:hover .post-content,
+.post-wrapper .post.active .post-content {
+  opacity: 1;
+}
+.post-wrapper .post:hover .post-content .meta,
+.post-wrapper .post.active .post-content .meta {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+.post-wrapper .post:nth-child(even) {
+  float: right;
+}
+.post-wrapper .post:nth-child(odd) {
+  float: left;
+}
+.post-wrapper .post:nth-child(even) .stem-overlay {
+  left: -110px;
+}
+.post-wrapper .post:nth-child(odd) .stem-overlay {
+  right: -110px;
+}
+.post-wrapper .post.bitbucket-icon .stem-overlay .icon {
+  background-image: url(https://img.icons8.com/ios/50/000000/briefcase.png);
+}
+.post-wrapper .post.m-icon .stem-overlay .icon {
+  background-image: url(https://img.icons8.com/ios/50/000000/saving-book.png);
+}
+.post-wrapper .post .stem-overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 60px;
+}
+.post-wrapper .post .stem-overlay .icon {
+  background: transparent no-repeat center center;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+.post-wrapper .post .stem-overlay .stem-mask {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: transparent url("../static/img/stem-mask.png") repeat-y top center;
+
+}
+.post-wrapper .post .post-content {
+  opacity: 0.3;
+  transition-duration: 0.4s;
+  -webkit-transform: none;
+  transform: none;
+}
+.post-wrapper .post .post-content .meta {
+  color: black;
+  margin: 0px 0px 15px 0px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+.post-wrapper .post .post-content .post-title {
+  font-size: 32px;
+  line-height: 42px;
+  margin: 0px 0px 15px 0px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .main-content,
+  .main-content .section-inner {
+    max-width: none;
+  }
+  .stem-wrapper {
+    left: 80px;
+  }
+  .stem-padding,
+  .single-stem-icon {
+    margin: 0px;
+    float: left;
+    margin-left: 50px;
+  }
+  .post-wrapper .post,
+  .post-wrapper .post:nth-child(even),
+  .post-wrapper .post:nth-child(odd) {
+    width: auto;
+    margin-left: 110px;
+    float: none;
+  }
+  .post-wrapper .post .stem-overlay,
+  .post-wrapper .post:nth-child(even) .stem-overlay,
+  .post-wrapper .post:nth-child(odd) .stem-overlay {
+    left: -60px;
+    right: auto;
+  }
+  .post-wrapper .post .post-content {
+    padding: 0px 50px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .header .page-title {
+    font-size: 40px;
+  }
+  .post-wrapper .post {
+    margin-left: 90px !important;
+  }
+  .post-wrapper .post .post-content {
+    padding: 0 25px;
+  }
+  .stem-wrapper {
+    left: 60px;
+  }
+  .stem-padding,
+  .single-stem-icon {
+    margin-left: 30px;
+  }
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+</style>
+	
+</head>
+	
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top menu" role="navigation" id="navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+					<span class="sr-only">Toggle navigation </span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse-main">
+				<ul class="nav navbar-nav">
+					<li><a class="active" href="index.html"> Home </a></li>
+					<li><a href="Education&Experience.html"> Experience </a></li>
+					<li><a href="projects.html"> Portfolio </a></li>
+					<li><a href="gallery.html"> Gallery </a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="stem-wrapper">
+		<div class="stem"></div>
+		<div class="stem-background"></div>
+	</div>
+
+	<header class="section header">
+		<div class="section-inner">
+			<div class="master-head" style="padding-top: 15%">
+				<h1 class="page-title">Experience</h1>
+				<p class="page-description">Clike to explore Christina's Education & Work Experience</p>
+			</div>
+		</div>
+	</header>
+
+	<div class="section main-content">
+		<div class="section-inner">
+			<div class="stem-padding"></div>
+			<div class="post-wrapper">
+				<article class="post m-icon" >
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2014-2015</p>
+						<h2 class="post-title">University of Waterloo</h2>
+						<h3><span class="underline--magical">Education</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Studied Mathematics at the University of Waterloo</li>
+								<li>Faculty of Mathematics Scholarship</li>
+								<li>University of Waterloo President's Scholarship</li>
+								<li>Annual GPA 3.7</li>
+								<li>Relevant Courses</li>
+									<ul>
+										<li>Introduction to Computer Science I</li>
+										<li>Introduction to Computer Science II</li>
+										<li>Calculus I for Honours Mathematics</li>
+										<li>Calculus II for Honours Mathematics</li>
+										<li>Algebra for Honours Mathematics</li>
+										<li>Linear Algebra for Honours Mathematics</li>
+										<li>Introduction to Microeconomics</li>
+										<li>Introduction to Macroeconomics</li>
+										<li>Introduction to Financial Accounting</li>
+								    </ul>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon" data-stem-color="green">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+
+					<div class="post-content">
+						<p class="meta">2015</p>
+						<h2 class="post-title">iFortune Canada Homes</h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Interned at iFortune Canada Homes as Financial Advisor</li>
+								<li>Prepared Excel version financial forecast for worldwide real estate projects.</li>
+								<li>Sourced new clients in real estate exhibitions.</li>
+								<li>Conducted investment banking information sessions for clients on short- and long-term financial objectives.</li>
+								<li>Negotiated of best proposals with Property developers.</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post m-icon" data-stem-color="yellow">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+
+					<div class="post-content">
+						<p class="meta">2015-2018</p>
+						<h2 class="post-title">University of Toronto</h2>
+						<h3><span class="underline--magical">Education</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Studied at University of Toronto</li>
+								<li>Specialist in Mathematical Application in Economics & Finance</li>
+								<li>Major in Statistical Science & Minor in Economics</li>
+								<li>Cumulative GPA 3.3</li>
+								<li>Anticipated Coursework:</li>
+									<ul>
+										<h4>Computer Science</h4>
+										<li>Mathematical Expression and Reasoning for Computer Science</li>
+										<li>Introduction to Computer Science</li>
+										<h4>Data Science & Statistics</h4>
+										<li>Time Series Analysis</li>
+										<li>Methods of Data Analysis</li>
+										<li>Methods for multivariate data</li>
+										<li>Surveys, Sampling and Observational Data</li>
+										<li>Design of Scientific Studies</li>
+										<li>Probability & Stat I</li>
+										<li>Probabilty & Stat II</li>
+										<li>Probability I</li>
+										<h4>Mathematics</h4>
+										<li>Introduction to Real Analysis</li>
+										<li>Multivariable Calculus</li>
+										<li>Introduction to Combinatorics & Algorithm</li>
+										<li>Linear Algebra II</li>
+										<li>Ordinary Differential Equations</li>
+										<li>Partial Differential Equations</li>
+										<li>Abstract Mathematics</li>
+										<li>Complex Variables</li>
+										<li>Nonlinear Optimization</li>
+										<h4>Economics & Finance</h4>
+										<li>Mathematical Theory Finance</li>
+										<li>Microeconomic Theory</li>
+										<li>Financial Economics I</li>
+										<li>Financial Economics II</li>
+										<li>Applied Game Theory</li>
+									</ul>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon" data-stem-color="white">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2017</p>
+						<h2 class="post-title">Bluekey Education</h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Worked at Bluekey Education as Digital Marketer and Sales Representative</li>
+								<li>Made $12,500 individual sales by selling 24 courses in total and became top sales in the team</li>
+								<li>Developed multi-platform advertising campaign for clients; performed analysis utilizing google analytics to improve traffic and made change for better user experience </li>
+								<li>Identify revenue insights and translated into business solutionss</li>
+								<li>Researched customers’ demands and collaborated in production of visual contents for media and web optimization</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2017-2018</p>
+						<h2 class="post-title">Simmer Huang</h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Worked at Simmer Huang as Digital Marketer and Server</li>
+								<li>Utilized Illustrator and Photoshop to design digital media banners aligned with goals for local and global marketing</li>
+								<li>Worked under pressure and coordinated marketing campaigns to promote limited time offers for the restaurant</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon" data-stem-color="yellow">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2018</p>
+						<h2 class="post-title">China Mobile</h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Interned at China Mobile as Data Analyst</li>
+								<li>Created pivot tables in Excel to extract significance from large data sets and matched information with VLOOKUP</li>
+								<li>Utilized R skills to interpret and forecast customer behaviors and improved business sales by 15% in 3 months period</li>
+								<li>Collected and transformed corresponding data to make comparison analysis models and create dashboards</li>
+								<li>Performed data mining and cleansing to turn massive raw data into useful information to make strategic decisions</li>
+								<li>Illustrated high quality of work and attention to details by achieving 95% of accuracy in verifying various data sources</li>
+								<li>Collaborated effectively with the team and presented key findings with insights to senior executives</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				
+				<article class="post m-icon">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2018-2019</p>
+						<h2 class="post-title">University of British Columbia</h2>
+						<h3><span class="underline--magical">Education</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Studied Master's of Digital Media</li>
+								<li>Specialized in Visual Technology, Data Visualization, Mobile & Web Development</li>
+								<li>Master of Digital Media Entrance Scholarship & Bursary</li>
+								<li>Relevant Courses</li>
+									<ul>
+										<li>Introduction to Game Design</li>
+										<li>Fundamental of Digital Media</li>
+										<li>Project: Into the Visual World</li>
+										<li>Improvisation</li>
+								    </ul>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon" data-stem-color="green">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2018-2019</p>
+						<h2 class="post-title">SFU CAC</h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Worked at SFU CAC as Front-end Developer</li>
+								<li>Created responsive site from provided design concepts by implementing HTML, CSS and JavaScript scripts and Bootstrap and jQuery frameworks; designed digital contents with Photoshop, Illustrator and other Adobe tools</li>
+								<li>Tested code in multiple browsers to endure cross-browse compatibility; leveraged responsive web frameworks</li>
+								<li>Implemented Google API and added a Google Map in HTML to assist users with navigation</li>
+								<li>Installed Flask Python to execute code from the terminal and enabled debug; maintained website on an ongoing basis</li>
+								<li>Provided internet related services such as domain name registration, web hosting, search engine optimization</li>
+								<li>Ability to multi-task, prioritizing projects without supervision and meeting deadlines regardless of workloads</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon" data-stem-color="yellow">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+					<div class="post-content">
+						<p class="meta">2018-2019</p>
+						<h2 class="post-title">Guess</h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Worked at Guess as Sales Associate</li>
+								<li>Exceeded sales target with average sales of $2500 per shift by sharing deep knowledge about products with genuine enthusiasm; focused on details in order to provide customer satisfaction and gained social interactive experience</li>
+								<li>Collaborated with managers to support operations during holiday with problem solving and active listening skills</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="post bitbucket-icon" data-stem-color="white">
+					<div class="stem-overlay">
+						<div class="icon"></div>
+						<div class="stem-mask"></div>
+					</div>
+
+					<div class="post-content">
+						<p class="meta">2018-2019</p>
+						<h2 class="post-title">Frank + Oak </h2>
+						<h3><span class="underline--magical">Work</span></h3>
+						<div class="entry-content" style="text-align: left">
+							<ul>
+								<li>Worked at Frank + Oak as Style Advisor</li>
+								<li>Shared deep knowledge about products with genuine enthusiasm</li>
+								<li>Communicated feedback to managers and the team for better achievement. </li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+			</div> <!-- post-wrapper -->
+
+			<div class="single-stem-icon scroll-to-top trigger-scroll-to-top"></div>
+
+		</div> <!-- section-inner -->
+	</div> <!-- main-content -->
+    
+	<footer class="footer section">
+		<div class="section-inner">
+			<div class="good-bye">
+				<p>Thank you!</p>
+				
+			</div>
+		</div>
+	</footer>
+	
+
+<script>
+	if (screen.width < 500) {
+  
+	  $("body").addClass("nohover");
+	  $("td, th")
+		.attr("tabindex", "1")
+		.on("touchstart", function() {
+		  $(this).focus();
+		});
+  
+}
+</script>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+(function($) {
+
+    $(document).ready(function() {
+        setupFade();
+        setupClickToScroll();
+        setupPostAnimation();
+        setupScrollToTop();
+     enableScrollAbortion();
+
+        $(window).scroll();
+  });
+
+  function enableScrollAbortion() {
+    var $viewport = $('html, body');
+    $viewport.on('scroll mousedown DOMMouseScroll mousewheel keyup', function(e) {
+        if ( e.which > 0 || e.type === 'mousedown' || e.type === 'mousewheel') {
+             $viewport.stop();
+        }
+    });
+  }
+
+    function setupScrollToTop() {
+        var scrollSpeed = 750;
+        $('.trigger-scroll-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, scrollSpeed);
+        });
+    }
+
+
+    function setupPostAnimation() {
+        var posts = $('.post-wrapper .post');
+        $(window).on('scroll resize', function() {
+
+            var currScroll = $(window).scrollTop() > $(document).scrollTop() ? $(window).scrollTop() : $(document).scrollTop(),
+                windowHeight = $(window).height(), // Needs to be here because window can resize
+                overScroll = Math.ceil(windowHeight*.20),
+                treshhold = (currScroll + windowHeight) - overScroll;
+
+            posts.each(function() {
+
+                var post = $(this),
+                    postScroll = post.offset().top
+
+                if(postScroll > treshhold) {
+                    post.addClass('hidden');
+                } else {
+                    post.removeClass('hidden');
+                }
+
+            });
+
+        });
+    }
+
+    function setupFade() {
+
+        var posts = $('.post-wrapper .post').reverse(),
+            stemWrapper = $('.stem-wrapper'),
+            halfScreen = $(window).height() / 2;
+
+        $(window).on('scroll resize', function() {
+
+            delay(function() {
+
+                var currScroll = $(window).scrollTop() > $(document).scrollTop() ? $(window).scrollTop() : $(document).scrollTop(),
+                    scrollSplit = currScroll + halfScreen;
+
+                posts.removeClass('active').each(function() {
+
+                    var post = $(this),
+                        postOffset = post.offset().top;
+
+                    if(scrollSplit > postOffset) {
+
+                        // Add active class to fade in
+                        post.addClass('active')
+
+                        // Get post color
+                        var color = post.data('stem-color') ? post.data('stem-color') : null,
+                            allColors = 'color-green color-yellow color-white'
+
+                        stemWrapper.removeClass(allColors);
+
+                        if(color !== null) {
+                            stemWrapper.addClass('color-' + color);
+                        }
+
+                        return false;
+                    }
+
+                });
+            }, 20);
+        });
+    }
+
+
+    function setupClickToScroll(post) {
+
+        var scrollSpeed = 750;
+
+        $('.post-wrapper .post .stem-overlay .icon').click(function(e) {
+            e.preventDefault();
+
+            var icon = $(this),
+                post = icon.closest('.post'),
+                postTopOffset = post.offset().top,
+                postHeight = post.height(),
+                halfScreen = $(window).height() / 2,
+                scrollTo = postTopOffset - halfScreen + (postHeight/2);
+
+            $('html, body').animate({
+                scrollTop: scrollTo
+            }, scrollSpeed);
+        });
+    }
+})(jQuery);
+
+
+var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
+
+$.fn.reverse = function() {
+    return this.pushStack(this.get().reverse(), arguments);
+};
+</script>
+<script>
+function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};} // VARIABLES
+var magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
+
+var gradientAPI = 'https://gist.githubusercontent.com/wking-io/3e116c0e5675c8bcad8b5a6dc6ca5344/raw/4e783ce3ad0bcd98811c6531e40256b8feeb8fc8/gradient.json';
+
+var randNumInRange = function randNumInRange(max) {return Math.floor(Math.random() * (max - 1));};
+
+var mergeArrays = function mergeArrays(arrOne, arrTwo) {return arrOne.
+  map(function (item, i) {return item + ' ' + arrTwo[i];}).
+  join(', ');};
+
+var addBackground = function addBackground(elms) {return function (color) {
+    elms.forEach(function (el) {
+      el.style.backgroundImage = color;
+    });
+  };};
+
+var getData = function () {var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {var response, data;return regeneratorRuntime.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+              fetch(url));case 2:response = _context.sent;_context.next = 5;return (
+              response.json());case 5:data = _context.sent;return _context.abrupt('return',
+            data.data);case 7:case 'end':return _context.stop();}}}, _callee, undefined);}));return function getData(_x) {return _ref.apply(this, arguments);};}();
+
+var addBackgroundToUnderlines = addBackground(magicalUnderlines);
+
+var buildGradient = function buildGradient(obj) {return 'linear-gradient(' + obj.direction + ', ' + mergeArrays(obj.colors, obj.positions) + ')';};
+
+var applyGradient = function () {var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, callback) {var data, gradient;return regeneratorRuntime.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+              getData(url));case 2:data = _context2.sent;
+            gradient = buildGradient(data[randNumInRange(data.length)]);
+            callback(gradient);case 5:case 'end':return _context2.stop();}}}, _callee2, undefined);}));return function applyGradient(_x2, _x3) {return _ref2.apply(this, arguments);};}();
+
+applyGradient(gradientAPI, addBackgroundToUnderlines);</script>
+</body>
+</html>
